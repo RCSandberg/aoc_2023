@@ -1,5 +1,7 @@
 import 'package:aoc_2023/helpers/read_file_helper.dart';
 
+import 'helpers/is_digit.dart';
+
 Future<int> day1A(String inputFile) async {
   var input = await readFileAsLines(inputFile);
   var sum = input.fold(0, (p, c) {
@@ -54,8 +56,4 @@ String charsAsDigit(String s1) {
       return '9';
   }
   throw 'bad';
-}
-
-bool isDigit(String s) {
-  return s == "1" || s == "2" || s == "3" || s == "4" || s == "5" || s == "6" || s == "7" || s == "8" || s == "9";
 }
